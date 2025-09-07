@@ -10,17 +10,18 @@ export default function Info() {
 
   return (
     <>
-      <div className="container m-auto max-w-80dvw">
-        <ul>
+    <h1 className="text-center text-4xl py-4 bg-gray-100">AI FAQ CHATBOT</h1>
+      <div className="container m-auto py-4">
+        <ul className="text-right">
           {questions.map(ques => (
-            <li key={ques.id}>
+            <li className="pb-4" key={ques.id}>
               {ques.question}
               </li>
           ))}
         </ul>
-        <ul>
+        <ul className="text-right">
           {queries.map((que) => (
-            <li key={que.id}>{que.query}</li>
+            <li className="pb-4" key={que.id}>{que.query}</li>
           ))}
         </ul>
 
