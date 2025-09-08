@@ -7,7 +7,6 @@ import TodoApp from './ToDo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
     <TodoApp />
   </StrictMode>,
 )
