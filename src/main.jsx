@@ -4,9 +4,10 @@ import './index.css'
 import App from './App.jsx'
 import Greeting from './Greeting.jsx'
 import TodoApp from './ToDo.jsx'
+import QuoteGenerator from './QuoteGen.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <TodoApp />
+    <QuoteGenerator />
   </StrictMode>,
 )
