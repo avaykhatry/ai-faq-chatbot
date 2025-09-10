@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { questions } from "./data";
-import './App.css';
+import "./App.css";
 
 let nextId = 0;
 
@@ -10,32 +10,41 @@ export default function Info() {
 
   return (
     <>
-    <h1 className="text-center text-4xl py-4 bg-gray-100">AI FAQ CHATBOT</h1>
+      <div
+        id="logo"
+        className="px-4 flex gap-4 justify-end items-center bg-gray-100"
+      >
+        <h1 className="mr-auto text-4xl py-4">CODE-IN SPACE</h1>
+        <button className="border rounded-md px-1 cursor-pointer hover:bg-red-300 active:bg-red-400">Manage</button>
+        <button className="border rounded-md px-1 cursor-pointer hover:bg-red-300 active:bg-red-400">Edit</button>
+      </div>
       <div className="container m-auto py-4">
         <ul className="text-right">
-          {questions.map(ques => (
+          {questions.map((ques) => (
             <li className="pb-4" key={ques.id}>
               {ques.question}
-              </li>
+            </li>
           ))}
         </ul>
         <ul className="text-right">
           {queries.map((que) => (
-            <li className="pb-4" key={que.id}>{que.query}</li>
+            <li className="pb-4" key={que.id}>
+              {que.query}
+            </li>
           ))}
         </ul>
 
         <div className="fixed bottom-0 right-0 left-0 query-line flex justify-center items-center bg-gray-100 p-4">
           <button
             id="query-btn"
-            className="border-1 p-2 pr-1.5 rounded-l-2xl"
+            className="border-1 p-2 pr-1.5 rounded-l-2xl cursor-pointer hover:bg-red-300 active:bg-red-400"
             onClick={() => {
               setQueries([...queries, { id: nextId++, query: query }]);
             }}
           >
             <img
-              className="w-8 cursor-pointer hover:bg-red-400 active:bg-red-600"
-              src="src/assets/send-1-svgrepo-com.svg"
+              className="w-8"
+              src="src/assets/add-svgrepo-com.svg"
               alt=""
             />
           </button>
@@ -47,21 +56,21 @@ export default function Info() {
             type="text"
             placeholder="Ask a question here"
           />
-             <button
+
+          <button
             id="query-btn"
-            className="border-1 p-2 pr-1.5 rounded-r-2xl"
+            className="border-1 p-2 pr-1.5 rounded-r-2xl cursor-pointer hover:bg-red-300 active:bg-red-400"
             onClick={() => {
               setQueries([...queries, { id: nextId++, query: query }]);
             }}
           >
             <img
-              className="w-8 cursor-pointer hover:bg-red-400 active:bg-red-600"
-              src="src/assets/add-svgrepo-com (1).svg"
+              className="w-8"
+              src="src/assets/send-1-svgrepo-com.svg"
               alt=""
             />
           </button>
         </div>
-        
       </div>
     </>
   );

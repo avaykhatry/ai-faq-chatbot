@@ -8,6 +8,6 @@ import QuoteGenerator from './QuoteGen.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <QuoteGenerator />
+    <App />
   </StrictMode>,
 )
