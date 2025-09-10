@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { questions } from "./data";
 import "./App.css";
+import Greeting from "./Greeting";
 
 let nextId = 0;
 
@@ -15,10 +16,15 @@ export default function Info() {
         className="px-4 flex gap-4 justify-end items-center bg-gray-100"
       >
         <h1 className="mr-auto text-4xl py-4">CODE-IN SPACE</h1>
-        <button className="border rounded-md px-1 cursor-pointer hover:bg-red-300 active:bg-red-400">Manage</button>
-        <button className="border rounded-md px-1 cursor-pointer hover:bg-red-300 active:bg-red-400">Edit</button>
+        <button className="border rounded-md px-1 cursor-pointer hover:bg-red-300 active:bg-red-400">
+          Manage
+        </button>
+        <button className="border rounded-md px-1 cursor-pointer hover:bg-red-300 active:bg-red-400">
+          Edit
+        </button>
       </div>
       <div className="container m-auto py-4">
+        <Greeting />
         <ul className="text-right">
           {questions.map((ques) => (
             <li className="pb-4" key={ques.id}>
@@ -42,11 +48,7 @@ export default function Info() {
               setQueries([...queries, { id: nextId++, query: query }]);
             }}
           >
-            <img
-              className="w-8"
-              src="src/assets/add-svgrepo-com.svg"
-              alt=""
-            />
+            <img className="w-8" src="src/assets/add-svgrepo-com.svg" alt="" />
           </button>
 
           <input

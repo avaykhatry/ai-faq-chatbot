@@ -1,5 +1,5 @@
 function Greeting() {
-    return <h1>&quot; hi how are yoah!&quot;</h1>
+    return <h1>Curious about something?</h1>
 }
 
 export default Greeting;
